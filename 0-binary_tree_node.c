@@ -3,7 +3,6 @@
 
 /**
  * binary_tree_node - Function Pointer
- *
  * @parent: Pointer to the parent node
  * @value: Value of node
  * 
