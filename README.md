@@ -17,25 +17,35 @@ Non-linear DSA
 * What is a complete, a full, a perfect, a balanced binary tree
 
 ## Binary Tree Structure
-1. ### Root
+### Root
 The node not having any parent.
-2. ### Node
+
+### Node
 Contains data and link to another node. Elements of a tree are called nodes.
-3. ### Parent node
-A node with at least one child and at most two children (that's why it is called Binary Tree)
-4. ### Leaf node
+
+### Parent node
+A node with at least one child and at most two children (that's why it is called Binary Tree).
+
+### Leaf node
 A node without child/children. It is also called an external node.
-5. ### Path
+
+### Path
 Sequence of consecutive edges from source node to destination node.
-6. ### Ancestor
-Any predecessor node on the path from root node to that node.
-7. ### Descendant
+
+### Ancestor
+Any predecessor node on the path from root node to that nod### Descendant
+
+### Descendant
 Any successor node on the path from root node to leaf node.
-8. ### Degree of a node
+
+### Degree of a node
 Number of connections it has to other nodes.
-9. ### Depth of a node
+
+### Depth of a node
 The length of the path from root to that node.
-10. ### Height of a node 
+
+### Height of a node 
 The number of edges in the longest path from that node to a leaf node.
-11. ### Level of node
+
+### Level of node
 The number of edges from root to the given node.
