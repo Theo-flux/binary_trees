@@ -7,6 +7,7 @@ Non-linear DSA
 - [Tree Traversal](https://alx-intranet.hbtn.io/rltoken/nMxoYQdZR_guroan8JeqBQ)
 - [Binary Search Tree](https://alx-intranet.hbtn.io/rltoken/qO5dBlMnYJzbaWG3xVpcnQ)
 - [Data structures: Binary Tree](https://alx-intranet.hbtn.io/rltoken/BeyJ2gjlE7_djwRiDyeHig)
+- [Balanced binary tree](https://www.digitalocean.com/community/tutorials/balanced-binary-tree-check)
 
 ## General
 * What is binary tree
@@ -29,3 +30,26 @@ Non-linear DSA
 * <h3>Height of a node</h3> The number of edges in the longest path from that node to a leaf node.
 * <h3>Level of node</h3> The number of edges from root to the given node.
 * <h3>Size of a binary tress</h3> The number of nodes; a leaf node has a size of 1
+
+## Balnced Binary Tree and Balance Factor (k):
+Balanced binary tree are very efficient to perform operations on.
+### conditions for a binary tree to be balanced:
+* The absolute difference of height of left and right subtrees at any node must be less than 1.
+* For each node, its left and right subtrees are balanced binary tree.
+### Height balanced binary tree:
+Balanced Binary Trees are also called Height Balanced Binary Trees.
+denoteda s HB(k) (where k is the balanced factor). If k = 0, then the tree is said to be fully balanced.
+
+### Self Balancing Binary Search Tree
+If a binary search tree has a balance factor of one then it is an AVL ( Adelso-Velskii and Landis) tree. This means that in an AVL tree the difference between left subtree and right subtree height is at most one.
+
+AVL tree is a self-balancing binary search tree. In an AVL tree if the difference between left and right subtrees is greater than 1 then it performs one of the following 4 rotations to rebalance itself :
+* left rotation
+* right rotation
+* left-right rotation
+* right-left rotation
+### How to check if a binary tree is balanced:
+The tree conditions to check if a binary tree is balanced are:
+* The absolute difference between heights of left and right subtrees at any node should be less than 1.
+* For each node, its left subtree should be a balanced binary tree.
+* For each node, its right subtree should be a balanced binary tree.
