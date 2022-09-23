@@ -1,4 +1,3 @@
-#include <stdlib.h>
 #include "binary_trees.h"
 
 /**
@@ -12,7 +11,7 @@ size_t binary_tree_nodes(const binary_tree_t *tree)
     size_t size = 0;
     if (tree == NULL)
     {
-    return (0);
+        return (0);
     }
 
     size += tree->left != NULL || tree->right != NULL ? 1 : 0;
