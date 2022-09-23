@@ -1,49 +1,35 @@
-#include <stdio.h>
-#include <stdlib.h>
 #include "binary_trees.h"
 
 /**
- * binary_tree_insert_right - Function to insert node at the right side of another node
+ * binary_tree_insert_right - Insert a node as the right-child
+ *                            of another in a binary tree.
+ * @parent: A pointer to the node to insert the right-child in.
+ * @value: The value to store in the new node.
  *
- * @parent: pointer to the node to insert the right-child in
- * @value: value to store in the new node
- * 
- * Return: leftNode or NULL on failure of if parent node is NULL
+ * Return: If parent is NULL or an error occurs - NULL.
+ *         Otherwise - a pointer to the new node.
+ *
+ * Description: If parent already has a right-child, the new node
+ *              takes its place and the old right-child is set as
+ *              the right-child of the new node.
  */
-binary_tree_t *binary_tree_insert_right(binary_tree_t *parent, int value){
-    binary_tree_t *rightNode, *temp;
+binary_tree_t *binary_tree_insert_right(binary_tree_t *parent, int value)
+{
+	binary_tree_t *new;
 
-    rightNode = (binary_tree_t *) malloc(sizeof(binary_tree_t));
-    temp = (binary_tree_t *) malloc(sizeof(binary_tree_t));
+	if (parent == NULL)
+		return (NULL);
 
-    if (rightNode == NULL){
-        free(rightNode);
-        return NULL;
-    }
+	new = binary_tree_node(parent, value);
+	if (new == NULL)
+		return (NULL);
 
-    if (temp == NULL){
-        free(temp);
-        return NULL;
-    }
+	if (parent->right != NULL)
+	{
+		new->right = parent->right;
+		parent->right->parent = new;
+	}
+	parent->right = new;
 
-    if (parent == NULL){
-        return NULL;
-    }
-
-    rightNode->n = value;
-    rightNode->parent = parent;
-    rightNode->left = NULL;
-
-    if (parent->right == NULL) {
-        rightNode->right = NULL;
-        parent->right = rightNode;
-    }
-    else {
-        temp = parent->right;
-        parent->right = rightNode;
-        rightNode->right = temp;
-    }
-
-    return rightNode;
-    free(temp);
+	return (new);
 }
