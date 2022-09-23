@@ -40,6 +40,13 @@ Balanced binary tree are very efficient to perform operations on.
 Balanced Binary Trees are also called Height Balanced Binary Trees.
 denoteda s HB(k) (where k is the balanced factor). If k = 0, then the tree is said to be fully balanced.
 
+### Tree Traversal
+Traversal is the process of visiting all nodes of a tree and may print their values too. All nodes are connected via links. The traversal always starts from root (head) node.
+There are three ways:
+1. In-order Traversal (left -> Root -> Right)
+2. Pre-order Traversal (Root -> Left -> Right)
+3. Post-order Traversal (Left -> Right -> Root)
+
 ### Self Balancing Binary Search Tree
 If a binary search tree has a balance factor of one then it is an AVL ( Adelso-Velskii and Landis) tree. This means that in an AVL tree the difference between left subtree and right subtree height is at most one.
 
